@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+		<meta name="application-name" content="Calculator">
+		<meta name="description" content="Web Technologies">
+		<meta name="author" content="ANSH KUSHWAHA">
+		<meta name="color-scheme" content="dark">
+		<meta name="theme-color" content="black" media="(prefers-color-scheme: dark)">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<noscript>JavaScript Error !!! :- Not Supported OR Currenlty Blocked by Your Browser</noscript>
+		<title>CALCULATOR</title>
+		<script>
+			function tap(x)
+			{
+				document.forms['calc']['screen'].value += x;
+			}
+			function clr()
+			{
+				document.forms['calc']['screen'].value = '';
+			}
+			function del()
+			{
+				document.forms['calc']['screen'].value = document.forms['calc']['screen'].value.substr(0, document.forms['calc']['screen'].value.length - 1);
+			}
+			function res()
+			{
+				document.forms['calc']['screen'].value = eval(document.forms['calc']['screen'].value);
+			}
+		</script>
+		<style>
+			* {
+				color: white;
+				text-align: center;
+				vertical-align: middle;
+				padding: 1px;
+				font-size: xx-large;
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+				font-weight: bolder;
+				font-style: oblique;
+			}
+			table, tr, th, td {
+				width: auto;
+				height: auto;
+				border: 10px solid;
+				border-collapse: collapse;
+			}
+			input {
+  				width: 100%;
+				box-sizing: border-box;
+			}
+			input[type=button] {
+				background-color: limegreen;
+				transition-duration: 0.5s;
+				padding: 10px;
+			}
+			input[type=button]:hover {
+				background-color: lightgoldenrodyellow;
+				color: black;
+			}
+			h1 {
+				font-size: 100px;
+			}
+			pre {
+				position: absolute;
+				right: 100px;
+				text-align: left;
+				width: fit-content;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+<pre>
+	<br>
+	<u>Guided By :-</u> Ms. Shama Pathania Mam
+	<br>
+	<u>Prepared By :-</u> Ansh Kushwaha
+				Roll No. :- SG20312
+				Branch :- BE CSE 4th sem
+	<br>
+</pre> 
+		<form id="calc">
+			<table>
+				<tr>
+					<th colspan="4">
+						<input type="text" id="screen" disabled>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="7" onclick="tap('7')">
+					</td>
+					<td>
+						<input type="button" value="8" onclick="tap('8')">
+					</td>
+					<td>
+						<input type="button" value="9" onclick="tap('9')">
+					</td>
+					<td>
+						<input type="button" value="/" onclick="tap('/')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="4" onclick="tap('4')">
+					</td>
+					<td>
+						<input type="button" value="5" onclick="tap('5')">
+					</td>
+					<td>
+						<input type="button" value="6" onclick="tap('6')">
+					</td>
+					<td>
+						<input type="button" value="*" onclick="tap('*')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="1" onclick="tap('1')">
+					</td>
+					<td>
+						<input type="button" value="2" onclick="tap('2')">
+					</td>
+					<td>
+						<input type="button" value="3" onclick="tap('3')">
+					</td>
+					<td>
+						<input type="button" value="-" onclick="tap('-')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="." onclick="tap('.')">
+					</td>
+					<td>
+						<input type="button" value="0" onclick="tap('0')">
+					</td>
+					<td>
+						<input type="button" value="00" onclick="tap('00')">
+					</td>
+					<td>
+						<input type="button" value="+" onclick="tap('+')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="AC" onclick="clr()">
+					</td>
+					<td>
+						<input type="button" value="DEL" onclick="del()">
+					</td>
+					<td colspan="2">
+						<input type="button" value="ENTER" onclick="res()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
